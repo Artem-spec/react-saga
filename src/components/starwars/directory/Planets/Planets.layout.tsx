@@ -10,6 +10,7 @@ export const PlanetsLayout = (props: IComponentProps) => {
   const { items } = props;
   return (
     <Container>
+      <h1>sdf</h1>
       <ul className="d-flex flex-wrap p-2 col-example">
         {/* Index т.к. нет добавления удаления, модификации элементов */}
         {items?.map((item, index) => {
