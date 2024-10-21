@@ -18,6 +18,7 @@ export const PlanetLayout = (props: IComponentProps) => {
           </Card.Text>
         </Card.Body>
       </Card>
+      
     </>
   );
 };
