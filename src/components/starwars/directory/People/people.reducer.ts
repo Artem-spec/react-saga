@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { IPeople } from "../../interface/people";
 
-export const initialState = {
+
+
+const initialState = {
   people: {} as IPeople,
   isLoad: false,
   isError: false,
@@ -11,9 +13,8 @@ export const peopleSlice = createSlice({
   name: "people",
   initialState,
   reducers: {
-    getPeopleFetchSaga: (state) => {
+    getPeopleFetch: (state) => {
       state.isLoad = true;
-      state.isError = false;
     },
     getPeopleSuccess: (state, action) => {
       state.people = action.payload;
@@ -26,6 +27,6 @@ export const peopleSlice = createSlice({
     },
   },
 });
-export const { getPeopleFetchSaga, getPeopleSuccess, getPeopleFailure } =
+export const { getPeopleFetch, getPeopleSuccess, getPeopleFailure } =
   peopleSlice.actions;
 export const peopleReducer = peopleSlice.reducer;
