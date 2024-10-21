@@ -11,7 +11,7 @@ export const planetsSlice = createSlice({
   name: "planets",
   initialState,
   reducers: {
-    getPlanetsFetchSaga: (state) => {
+    getPlanetsFetch: (state) => {
       state.isLoad = true;
     },
     getPlanetsSuccess: (state, action) => {
@@ -25,5 +25,5 @@ export const planetsSlice = createSlice({
     },
   },
 });
-export const { getPlanetsFetchSaga, getPlanetsSuccess, getPlanetsFailure } = planetsSlice.actions;
+export const { getPlanetsFetch, getPlanetsSuccess, getPlanetsFailure } = planetsSlice.actions;
 export const planetsReducer = planetsSlice.reducer;
